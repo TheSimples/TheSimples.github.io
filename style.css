@@ -142,6 +142,9 @@ header a:hover{
     .second-text, .works{
         text-align: center;
     }
+    .about{
+	height: 570px;
+    }
     .about .second-text{
         margin-bottom: 30px;
     }
