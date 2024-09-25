@@ -1,0 +1,153 @@
+body{
+    margin: 0;
+	padding: 0;
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.header{
+    height: 730px;
+    width: 100%;
+    background: no-repeat center url("city.webp");
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5);
+    color: white;
+}
+.container{
+    display: flex;
+    height: 93px;
+    max-width: 1109px;
+    padding: 100px 30px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+.dropdown-menu{
+    display: none;
+ }
+ label.hamburger {
+    display: block;
+    background: none;
+    width: 40px; 
+    height: 60px;
+    position: relative;
+    cursor: pointer;
+ }
+ 
+ input#hamburger {
+   display:none
+ }
+ 
+ .line {
+    position: absolute;
+    height: 6px;
+    width: 100%;
+    background: white;
+    transition: 0.5s;
+ }
+ .line:nth-child(1) { top: 12px; }
+ .line:nth-child(2) { top: 24px; }
+ .line:nth-child(3) { top: 36px; }
+ 
+ #hamburger:checked + .hamburger .line:nth-child(1){
+    transform: translateY(12px) rotate(-45deg);
+ }
+ 
+ #hamburger:checked + .hamburger .line:nth-child(2){
+    opacity:0;
+ }
+ 
+ #hamburger:checked + .hamburger .line:nth-child(3){
+    transform: translateY(-12px) rotate(45deg);
+ }
+.logo{
+    font-size: 26px;
+    font-weight: 700;
+}
+.menu{
+    display: flex;
+    gap: 50px
+}
+ul{
+    list-style: none;
+}
+li:nth-child(1){
+    font-weight: 700;
+}
+header a{
+    text-decoration: none;
+    color: white;
+}
+header a:hover{
+    color: rgb(171, 222, 69);
+}
+.header-texts{
+    display: grid;
+    padding: 0 30px;
+    margin: 0 auto;
+    max-width: 1109px;
+    height: 400px;
+    align-items: center;
+}
+.title-text{
+    font-size: 64px;
+}
+.second-text{
+    font-size: 24px;
+}
+.works{
+    padding-top: 70px;
+    text-decoration: underline;
+}
+.about{
+    display: flex;
+    height: 540px;
+    align-items: center;
+    justify-content: center;
+}
+.about-text{
+    width: 70%;
+    color:#333333;
+    text-align: justify;
+}
+.about .second-text{
+    font-weight: bold;
+    margin-bottom: 70px;
+}
+@media (max-width: 800px){
+    .dropdown-menu{
+        display: flex;
+        position: absolute;
+        left: 0;
+        margin-left: 50px;
+    }
+    .logo{
+        font-size: 35px;
+    }
+    .menu{
+        display: none;
+        position: absolute;
+    }
+    .container{
+        justify-content: center;
+    }
+    .header{
+        justify-content: center;
+    }
+    .title-text{
+        text-align: center;
+        line-height: 70px;
+        margin-bottom: 15px;
+    }
+    .second-text, .works{
+        text-align: center;
+    }
+    .about .second-text{
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 340px){
+    .dropdown-menu{
+        margin-left: 30px;
+    }
+}

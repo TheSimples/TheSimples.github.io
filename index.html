@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="dropdown-menu">
+                <input type="checkbox" id="hamburger">
+                <label for="hamburger" class="hamburger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </label>
+            </div>
+            <div class="logo">Portfolio</div>
+            <div class="nav">
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a class="menu-link" href="">Home</a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-link" href="">About</a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-link" href="">Skills</a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-link" href="">Portfolio</a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-link" href="">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-texts">
+            <div class="title-text">Hi, It’s Drychak Bogdan</div>
+            <div class="second-text">FrontEnd developer from Ivano-Frankivsk, Ukraine</div>
+            <a class="works" href="">Latest works</a>
+        </div>
+    </header>
+    <main>
+        <div class="about">
+            <div class="about-text">
+                <div class="second-text">About</div>
+                <p>Lorem ipsum dolor sit amet, Arcu, sed nisi, mi, arcu libero phasellus tincidunt. Rhoncus, diam penatibus aliquet tellus, in rutrum augue. Pellentesque senectus risus consectetur et sed purus sed. Consectetur adipiscing elit. Egestas porttitor nulla nulla egestas odio pharetra egestas aliquet mollis. 
+                    <br>Arcu, sed nisi, mi, arcu libero phasellus tincidunt. Rhoncus, diam penatibus aliquet tellus, in rutrum augue. Pellentesque senectus risus consectetur et sed purus sed. Consectetur adipiscing elit. Egestas porttitor nulla nulla egestas odio pharetra egestas aliquet mollis. diam penatibus aliquet tellus, in rutrum augue. Pellentesque.
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        function editText(language){
+            if(language === 'ua'){
+                title.textContent = 'Привіт, світ'
+                localStorage.setItem('lang', 'ua')
+            }
+            else{
+                title.textContent = 'Hello, world!'
+                localStorage.setItem('lang', 'en')
+            }
+        }
+        const lang = localStorage.getItem('lang')
+        const title = document.getElementById('title')
+
+        editText(lang)
+
+        const uaBtn = document.getElementById('ua')
+        const enBtn = document.getElementById('en')
+        uaBtn.addEventListener('click', editText('ua'))
+        enBtn.addEventListener('click', editText('en'))
+    </script>
+</body>
+</html>
