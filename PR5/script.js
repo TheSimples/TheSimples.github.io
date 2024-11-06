@@ -11,7 +11,7 @@ function getMyLocation(){
 
 function dispayLocation(positon){
     let latitude = positon.coords.latitude;
-    let longitude = positon.coords.longtitude;
+    let longitude = positon.coords.longitude;
     let div = document.getElementById('location');
     div.innerHTML = `You are at Latitude: ${latitude}, Longitude: ${longitude}`;
 }
